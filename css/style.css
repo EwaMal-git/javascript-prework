@@ -1,2 +1,36 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-/*# sourceMappingURL=style.css.map */
+body {
+  margin: 0;
+  background-color: yellowgreen;
+}
+
+.container {
+  background-color: royalblue;
+  text-align: center;
+  margin: 150px;
+  padding: 100px;
+}
+
+.buttons {
+  padding: 20px;
+}
+
+.btn {
+  height: 120px;
+  width: 180px;
+  border-radius: 20%;
+  border: 3px solid blue;
+  background-color: yellow;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 15px;
+}
+
+#messages {
+  font-size: 22px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3Nhc3Mvc3R5bGUuc2NzcyIsInN0eWxlLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHNCQUFzQjtBQ0N4Qjs7QURFQTtFQUNFLFNBQVM7RUFDVCw2QkFBNkI7QUNDL0I7O0FER0E7RUFDQSwyQkFBMkI7RUFDM0Isa0JBQWtCO0VBQ2xCLGFBQWE7RUFDYixjQUFjO0FDQWQ7O0FESUE7RUFDQSxhQUFhO0FDRGI7O0FESUE7RUFDQSxhQUFhO0VBQ2IsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQixzQkFBc0I7RUFDdEIsd0JBQXdCO0VBQ3hCLGVBQWU7RUFDZixpQkFBaUI7RUFDakIsWUFBWTtBQ0RaOztBRElBO0VBQ0MsZUFBZTtFQUNmLGlCQUFpQjtBQ0RsQiIsImZpbGUiOiJzdHlsZS5jc3MifQ== */
