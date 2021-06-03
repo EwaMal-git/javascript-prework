@@ -1,9 +1,14 @@
  
-var argButtonName, buttonPaper, buttonRock, buttonScissors;
+var argButtonName, buttonPaper, buttonRock, buttonScissors, counterPlayer, counterComputer;
 
 buttonRock = document.getElementById('button-rock');
 buttonPaper = document.getElementById('button-paper');
 buttonScissors = document.getElementById('button-scissors');
+counterPlayer = document.getElementById('counter-player');
+counterComputer = document.getElementById('counter-computer');
+
+let counterPl = 0;
+let counterCom = 0;
 
 function buttonClicked(argButtonName) {
   clearMessages();
@@ -22,16 +27,21 @@ function displayResult(argPlayerMove, argComputerMove) {
   console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
   if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
     printMessage('Wygrywasz!');
+    counterPl = counterPl + 1;
   } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
     printMessage('Wygrywasz!');
+    counterPl = counterPl + 1;
   } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
     printMessage('Wygrywasz!');
+    counterPl = counterPl + 1;
   } else if (argPlayerMove == argComputerMove) {
     printMessage('Remis!');
   } else {
     printMessage('Przegrywasz :(');
+    counterCom = counterCom + 1;
   }
   printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+  printResults();
 }
 
 function getMoveName(argMoveId) {
@@ -52,4 +62,8 @@ buttonRock.addEventListener('click', function(){ buttonClicked('kamień'); });
 buttonPaper.addEventListener('click', function(){ buttonClicked('papier'); });
 buttonScissors.addEventListener('click', function(){ buttonClicked('nożyce'); });
 
+function printResults () {
+  counterPlayer.innerHTML = counterPl;
+  counterComputer.innerHTML = counterCom;
 
+}
