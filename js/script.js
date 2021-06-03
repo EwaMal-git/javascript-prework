@@ -1,31 +1,28 @@
  
-var argButtonName, buttonPaper, buttonRock, buttonScissors, counterPlayer, counterComputer;
 
-buttonRock = document.getElementById('button-rock');
-buttonPaper = document.getElementById('button-paper');
-buttonScissors = document.getElementById('button-scissors');
-counterPlayer = document.getElementById('counter-player');
-counterComputer = document.getElementById('counter-computer');
+const buttonRock = document.getElementById('button-rock'),
+      buttonPaper = document.getElementById('button-paper'),
+      buttonScissors = document.getElementById('button-scissors');
 
-let counterPl = 0;
-let counterCom = 0;
+let counterPlayer = document.getElementById('counter-player'),
+    counterComputer = document.getElementById('counter-computer'),
+    counterPl = 0,
+    counterCom = 0;
 
-function buttonClicked(argButtonName) {
+function buttonClicked (argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
- 	playerMove = argButtonName;
-	randomNumber = Math.floor(Math.random() * 3 + 1);
+ 	let playerMove = argButtonName;
+	let randomNumber = Math.floor(Math.random() * 3 + 1);
 	console.log('wylosowana liczba to: ' + randomNumber);
-	computerMove = getMoveName(randomNumber);
+	let computerMove = getMoveName(randomNumber);
 	console.log('ruch komputera to: ' + computerMove);
 	displayResult(playerMove, computerMove);
 }
 
-var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
-
-function displayResult(argPlayerMove, argComputerMove) {
+function displayResult (argPlayerMove, argComputerMove) {
   console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
-  if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
+     if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
     printMessage('Wygrywasz!');
     counterPl = counterPl + 1;
   } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
@@ -44,7 +41,7 @@ function displayResult(argPlayerMove, argComputerMove) {
   printResults();
 }
 
-function getMoveName(argMoveId) {
+function getMoveName (argMoveId) {
   console.log('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
   if (argMoveId == 1) {
     return 'kamień';
